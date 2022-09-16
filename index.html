@@ -1,0 +1,30 @@
+<html>
+<head>
+    <style>
+        .embed-container {
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+        }
+
+        .embed-container iframe,
+        .embed-container object,
+        .embed-container embed {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<div class='embed-container'><iframe id="vimeo-video" src='https://player.vimeo.com/video/' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
+
+<script type="text/javascript">
+    function loadVideo() {
+    
+        document.getElementById('vimeo-video').src = 'https://player.vimeo.com/video/'+window.location.search.slice(1);
+    }    
+    loadVideo();
+</script>
+</html>
